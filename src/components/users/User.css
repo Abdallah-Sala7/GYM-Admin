@@ -1,0 +1,96 @@
+.table{
+    max-width: 100%;
+    overflow-x: scroll;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.table-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+.table-info h2{
+    text-transform: capitalize;
+    font-family: serif;
+}
+.add-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    background-color: lightseagreen;
+    color: #fff;
+    border-radius: 5px;
+}
+.add-user svg{
+    display: none;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width: 100%;
+}
+
+.styled-table thead tr {
+    background-color: var(--scend-color);
+    color: var(--text-color);
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+
+.styled-table tbody tr {
+    border-bottom: 1px solid var(--scend-color);
+    transition: 0.6s  ease-in-out;
+    cursor: pointer;
+}
+
+.styled-table tbody tr img{
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    margin-right: 15px;
+    object-fit: cover;
+}
+.styled-table tbody tr .name-flex{
+    display: flex;
+    align-items: center;
+}
+.styled-table tbody tr .button-flex span,
+.styled-table tbody tr .button-flex a{
+    padding: 8px 16px ;
+    background-color: red;
+    color: #fff;
+    z-index: 1;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+.styled-table tbody tr .button-flex a{
+    background-color:limegreen ;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid var(--logo-color);
+}
+
+.styled-table tbody tr:hover {
+    color: var(--logo-color);
+    background-color: var(--scend-color);
+}
+
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+    .add-user svg{display: block;}
+    
+    .add-user{height: 40px;}
+}

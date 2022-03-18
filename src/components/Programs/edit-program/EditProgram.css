@@ -1,0 +1,108 @@
+
+.program-top{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.program-top .program-info,
+.program-top .program-performance{
+    padding: 30px;
+    box-shadow:  0px 0px 24px var(--shadow-color);
+    border-radius: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.program-top .program-performance .program-performance-chart{
+    width: 100%;
+    height: 250px;
+}
+.program-top .program-info .img-box{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.program-top .program-info .img-box img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 25px;
+}
+.program-top .program-info .img-box h4,
+.program-top .program-performance h4
+{
+    text-transform: capitalize;
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 500;
+}
+.program-top .program-info p{
+    margin-bottom: 20px;
+    color: var(--icon-color);
+}
+.program-top .program-info p span{
+    color: var(--text-color);
+    font-weight: 600;
+    width: 90px;
+    display: inline-block;
+    margin-right: 35px;
+}
+/* ************************ */
+.program-bottom{
+    display: flex;
+    box-shadow:  0px 0px 24px var(--shadow-color);
+    padding: 40px;
+    border-radius: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.program-bottom .program-left-form{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+.program-bottom .program-left-form label{
+    color: var(--text-color);
+    margin: 15px 0;
+}
+.program-bottom .program-left-form input{
+    background-color: transparent;
+    color: var(--icon-color);
+    border: none;
+    border-bottom: 1px solid var(--icon-color);
+    padding: 4px;
+    outline: none;
+    width: 200px;
+}
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+    .program-top{justify-content: space-between;}
+
+    .program-top .program-info,
+    .program-top .program-performance{
+        width: 48%;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+}

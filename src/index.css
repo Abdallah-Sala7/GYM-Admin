@@ -1,13 +1,70 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+li{list-style: none;}
+
+body{
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: 0.3s background ease-in-out;
+  font-family: system-ui;
+}
+
+a{text-decoration: none; color: inherit;}
+
+:root{
+
+  --icon-color:#767676;
+  --main-color:#ba8fff;
+  --logo-color:#764abc;
+  --bg-color:#f1f1f1;
+  --scend-color:#fff;
+  --text-color:#242526;
+  --shadow-color:#00000026;
+}
+body.dark{
+  --shadow-color:#000000b9;
+  --text-color:#fff;
+  --bg-color:#121212;
+  --scend-color: #242526;
+}
+.app{
+  display: flex;
+}
+.page{
+  display: flex;
+}
+.page .main{
+  padding: 20px;
+  flex: 1;
+  max-width: calc(100vw - 90px);
+}
+.page .main.active{
+  max-width: calc(100vw - 200px);
+}
+.css-574lq2-MuiFormControl-root{
+  margin: 0 !important;
+  min-width: 200px !important;
+}
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
 }

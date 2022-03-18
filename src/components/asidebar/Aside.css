@@ -1,0 +1,122 @@
+.aside{
+    background-color: var(--scend-color);
+    position: sticky;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80px;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+    transition: 0.3s width ease-in-out;
+    padding: 40px 0 40px 10px;
+}
+.aside.active{
+    width: 200px;
+}
+.aside .minu-icon-name {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: var(--icon-color);
+    align-items: center;
+    cursor: pointer;
+    border-bottom-left-radius: 35px;
+    border-top-left-radius: 35px;
+    transition: 0.3s color ease-in-out;
+
+}
+.aside .minu-icon-name.active::before{
+    position: absolute;
+    top: -50px;
+    right: 0;
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--bg-color);
+    pointer-events: none;
+}
+.aside .minu-icon-name.active::after{
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--bg-color);
+    pointer-events: none;
+}
+.aside .minu-icon-name.active{
+    background-color: var(--bg-color);
+    color: var(--logo-color);
+}
+.aside .minu-icon-name:hover{
+    color: var(--logo-color);
+}
+.aside .minu-icon-name .aside-icon{
+    padding: 20px;
+}
+.aside .minu-icon-name .aside-icon svg{    font-size: 25px;
+}
+
+.aside .minu-icon-name span.icon-span {
+    font-size: 17px;
+    padding-right: 20px;
+    padding-left: 30px;
+}
+
+.open-minu {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    color: var(--icon-color);
+    margin: auto;
+    transform: rotate(180deg);
+    transition: 0.3s ease-in-out;
+}
+.open-minu.active{
+    transform: rotate(0deg);
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .aside{
+        width: 90px;
+    }
+    .aside.active{
+        width: 250px;
+    }
+    .aside .minu-icon-name .aside-icon{
+        font-size: 25px;
+        padding: 25px;
+    }
+    .aside .minu-icon-name span.icon-span {
+        font-size: 19px;
+        padding-left: 50px;
+    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+}

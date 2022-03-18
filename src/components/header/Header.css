@@ -1,0 +1,116 @@
+.header{
+    position: sticky;
+    top: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    background-color: var(--scend-color);
+    align-items: center;
+    padding: 0 30px;
+    color: #fff;
+    z-index: 111;
+}
+.header h3.logo {
+    cursor: pointer;
+    color: var(--logo-color);
+}
+.header input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--icon-color);
+    padding: 10px 0;
+    width: 200px;
+    margin-left: 55px;
+    outline: none;
+    display: none;
+    color: #fff;
+}
+.header-box {
+    display: flex;
+    height: 100%;
+    width: 300px;
+    align-items: center;
+    flex: 3;
+    justify-content: right;
+}
+.header-box span.dark-span{
+    width: 55px;
+    margin-right: 25px;
+    cursor: pointer;
+
+}
+.header-box span.dark-span div{
+    pointer-events: none;
+}
+.css-lu9khh-MuiSwitch-root .MuiSwitch-thumb {
+    background-color: var(--logo-color) !important;
+}
+.header-box span.noti{
+    margin-right: 35px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    color: var(--icon-color);
+}
+/* .header-box span.dark-span span{display: none;}
+.header-box span.dark-span span.active{display: block; font-size: 35px;} */
+.header-box span.noti::before{
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    content: '';
+    width: 7px;
+    height: 7px;
+    background-color: var(--logo-color);
+    border-radius: 50%;
+
+}
+.header-box img {
+    width: 30px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.header-box span.admin-name {
+    font-size: 15px;
+    margin-left: 5px;
+    margin-right: 20px;
+    color: var(--icon-color);
+    cursor: pointer;
+    display: none;
+}
+span.lang {
+    cursor: pointer;
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .header-box span.admin-name{display: block;}
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+    .header input{
+        display: block;
+    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+}

@@ -1,0 +1,127 @@
+.edit-user h2{
+    font-size: 25px;
+    margin: 20px 0;
+}
+.edit-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.edit-container > div{
+    border-radius: 20px;
+}
+.user-info {
+    flex: 0.8;
+    padding: 20px;
+    background-color: var(--scend-color);
+} 
+.user-info > p{
+    color: var(--icon-color);
+    margin: 25px 0;
+}
+.user-info .info-box {
+    display: flex;
+    align-items: center;
+}
+
+.user-info .info-box img{
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user-info .info-box .info-name h4{
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.user-info .info-box .info-name p{
+    color: var(--icon-color);
+    font-size: 14px;
+}
+.user-info .details p{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.user-info .details p svg{
+    margin-right: 15px;
+    color: var(--icon-color);
+    font-size: 22px;
+}
+.edit-box{
+    flex: 1;
+    padding: 20px;
+    background-color: var(--scend-color);
+}
+.edit-box h4{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.edit-box .flex-edit{
+    display: flex;
+    justify-content: space-between;
+}
+.edit-box .edit-form {
+    display: flex;
+    flex-direction: column;
+}
+.edit-box .edit-form label{
+    margin: 10px 0;
+    font-size: 15px;
+    color: var(--icon-color);
+}
+.edit-box .edit-form input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--icon-color);
+    outline: none;
+    color: var(--text-color);
+    padding: 4px;
+    outline: none;
+}
+.edit-upload{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    min-height: 200px
+}
+.edit-upload .uploaud-img{
+    width: 120px;
+    height: 120px;
+    border-radius: 7px;
+    position: relative;
+    background-color: var(--bg-color);
+    overflow: hidden;
+}
+.edit-upload .uploaud-img img{
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    pointer-events: none;
+}
+.edit-upload .uploaud-img input[type="file"] {
+    color: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.edit-upload button{
+    width: 100px;
+    cursor: pointer;
+    padding: 8px;
+    outline: none;
+    border: none;
+    background-color: var(--logo-color);
+    color: #fff;
+    border-radius: 7px;
+}

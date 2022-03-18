@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Aside from "./components/asidebar/Aside";
+import Header from "./components/header/Header";
+import Home from "./components/home/Home";
+import EditProgram from "./components/Programs/edit-program/EditProgram";
+import NewProgram from "./components/Programs/new-program/NewProgram";
+import Program from "./components/Programs/Program";
+import EditUser from "./components/user-info/EditUser";
+import NewUser from "./components/users/NewUser";
+import User from "./components/users/User";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="container">
+      <BrowserRouter>
+        <Header />
+        <div className="page">
+          <Aside />
+          <div className="main">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/programs" element={<Program /> } />
+              <Route  path="/users" element={<User /> } />
+              <Route path="users/add-user" element={<NewUser />} />
+              <Route path="users/info/:id" element={<EditUser />} />
+              <Route path="programs/add-program" element={<NewProgram />} />
+              <Route path="programs/edit-program/:id" element={<EditProgram />} />
+            </Routes>
+          </div >
+        </div>
+      </BrowserRouter></div>
   );
 }
 

@@ -1,0 +1,99 @@
+.new-program h2{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.new-program .new-program-form{
+    display: flex;
+    flex-direction: column;
+    /* padding: 30px; */
+}
+.new-program-upload{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius:20px;
+    overflow: hidden;
+    background-color: #fff;
+    margin-top: 20px;
+
+}
+.new-program-upload input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.new-program-upload img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    pointer-events: none;
+}
+.new-program .new-program-form label{
+    font-size: 15px;
+    color: var(--icon-color);
+    margin: 20px 0;
+}
+.new-program .new-program-form input{
+    padding: 8px;
+    outline: none;
+    border: 1px solid var(--icon-color);
+    background-color: transparent;
+    color: var(--text-color);
+    border-radius: 4px;
+}
+.new-program .new-program-form button{
+    padding: 9px;
+    background-color: var(--logo-color);
+    margin-top: 20px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+}.days label{
+    margin: 0 !important;
+}
+.days .css-574lq2-MuiFormControl-root{width: 100% !important;}
+.MuiSelect-select.MuiSelect-outlined{color: var(--text-color) !important;}
+.MuiOutlinedInput-notchedOutline.css-1d3z3hw-MuiOutlinedInput-notchedOutline{border-color: var(--icon-color) !important;}
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+    .new-program .new-program-form input,
+    .days .css-574lq2-MuiFormControl-root{
+        width: 50% !important;
+    }
+    .new-program .new-program-form button{width: 20%;}
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+    .new-program .new-program-form{
+        padding: 30px;
+    }
+
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
+}

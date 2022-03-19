@@ -22,7 +22,7 @@ function EditUser() {
   console.log(img);
 
   return (
-    <div className='edit-user'>
+    <div className='edit-user container'>
         <h2>Edit User</h2>
         <div className="edit-container">
           <div className="user-info">

@@ -1,24 +1,39 @@
 .aside{
     background-color: var(--scend-color);
-    position: sticky;
+    position: fixed;
     top: 70px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 80px;
-    height: calc(100vh - 70px);
+    height:calc(100vh - 70px);
     overflow: hidden;
     transition: 0.3s width ease-in-out;
-    padding: 40px 0 40px 10px;
+    width: 0;
+    padding: 35px 0;
+    padding-left: 10px;
+    z-index: 11;
+    left: -10px;
 }
 .aside.active{
-    width: 200px;
+    width: 250px;
+}
+.aside .logo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    color: var(--logo-color);
+
+}
+.aside .logo svg{
+    margin: 25px;
+    font-size: 25px;
+}
+.aside .logo h2{
+    padding-left: 30px;
 }
 .aside .minu-icon-name {
     position: relative;
     display: flex;
     width: 100%;
-    justify-content: space-between;
     color: var(--icon-color);
     align-items: center;
     cursor: pointer;
@@ -65,7 +80,7 @@
 }
 
 .aside .minu-icon-name span.icon-span {
-    font-size: 17px;
+    font-size: 19px;
     padding-right: 20px;
     padding-left: 30px;
 }
@@ -92,6 +107,11 @@
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+    .aside{
+        width: 90px;
+        position: sticky;
+        left: 0;
+    }
 
 }
 
@@ -100,17 +120,7 @@
     .aside{
         width: 90px;
     }
-    .aside.active{
-        width: 250px;
-    }
-    .aside .minu-icon-name .aside-icon{
-        font-size: 25px;
-        padding: 25px;
-    }
-    .aside .minu-icon-name span.icon-span {
-        font-size: 19px;
-        padding-left: 50px;
-    }
+
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */

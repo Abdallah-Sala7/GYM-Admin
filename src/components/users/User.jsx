@@ -12,7 +12,7 @@ function User() {
   const dispatch = useDispatch()
 
   return (
-    <>
+    <div className='container'>
     <div className="table-info">
       <h2>Users info</h2>
       <Link className="add-user" to={'add-user'}>
@@ -65,7 +65,7 @@ function User() {
         </tbody>
     </table>
     </div>
-    </>
+    </div>
   )
 }
 

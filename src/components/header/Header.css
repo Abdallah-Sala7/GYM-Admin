@@ -6,13 +6,19 @@
     display: flex;
     background-color: var(--scend-color);
     align-items: center;
-    padding: 0 30px;
+    padding: 0 20px;
     color: #fff;
     z-index: 111;
+    /* right: 0; */
+    justify-content: space-between;
 }
-.header h3.logo {
-    cursor: pointer;
+.header h2{
     color: var(--logo-color);
+}
+.menu-open svg{
+    cursor: pointer;
+    font-size: 35px;
+    color: var(--text-color);
 }
 .header input{
     background-color: transparent;
@@ -20,7 +26,6 @@
     border-bottom: 1px solid var(--icon-color);
     padding: 10px 0;
     width: 200px;
-    margin-left: 55px;
     outline: none;
     display: none;
     color: #fff;
@@ -28,14 +33,11 @@
 .header-box {
     display: flex;
     height: 100%;
-    width: 300px;
     align-items: center;
-    flex: 3;
     justify-content: right;
 }
 .header-box span.dark-span{
     width: 55px;
-    margin-right: 25px;
     cursor: pointer;
 
 }
@@ -58,6 +60,7 @@
     cursor: pointer;
     position: relative;
     color: var(--icon-color);
+    display: none;
 }
 /* .header-box span.dark-span span{display: none;}
 .header-box span.dark-span span.active{display: block; font-size: 35px;} */
@@ -76,6 +79,7 @@
     width: 30px;
     border-radius: 9px;
     cursor: pointer;
+    display: none;
 }
 
 .header-box span.admin-name {
@@ -92,11 +96,20 @@ span.lang {
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-    .header-box span.admin-name{display: block;}
+    .header h2{
+        margin:0 55px;
+    }
+    
 }
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+    .header-box span.admin-name,.header-box span.noti ,.header-box img {display: flex;}
+    .header-box{ flex: 3; width: 300px;}
+    .header-box span.dark-span{
+        margin-right: 25px;
+    }
+
 }
 
 /* // Large devices (desktops, 992px and up) */

@@ -82,7 +82,7 @@ const onPieEnter = (_, index) => {
 
 
   return (
-    <div>
+    <div className='container'>
         <div className="program-top">
           <div className="program-performance">
             <h4>Program Performance</h4>

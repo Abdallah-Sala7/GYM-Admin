@@ -10,8 +10,8 @@ function Program() {
   const dispatch = useDispatch()
   console.log(program);
   return (
-    <>
-    <div className="table-info">
+    <div className='container'>
+    <div className="table-info ">
         <h2>Programs info</h2>
         <Link className="add-user" to={'add-program'}>
           <Add /> Add Program
@@ -61,7 +61,7 @@ function Program() {
       </tbody>
       </table>
     </div>
-    </>
+    </div>
   )
 }
 

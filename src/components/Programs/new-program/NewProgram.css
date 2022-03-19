@@ -16,6 +16,7 @@
     overflow: hidden;
     background-color: #fff;
     margin-top: 20px;
+    z-index: 0;
 
 }
 .new-program-upload input{

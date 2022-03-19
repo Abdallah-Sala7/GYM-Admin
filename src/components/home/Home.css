@@ -1,15 +1,16 @@
 .costs {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: 30px;
+    width: 90%;
+    margin: auto;
 }
 .costs .cost-box{
     padding: 15px;
-    /* box-shadow:  0px 0px 24px var(--shadow-color); */
     background-color: var(--scend-color);
     margin-bottom: 20px;
-    width: 220px;
+    width: 92%;
     border-radius: 5px;
 }
 .costs .cost-box h4{
@@ -35,7 +36,7 @@
 
 .chart{
     height: 320px;
-    width: 100%;
+    width: 92%;
     margin: auto;
     box-shadow:  0px 0px 24px var(--shadow-color);
     padding: 10px;
@@ -54,7 +55,7 @@ h3.user-h3 {
     justify-content: space-between;
     padding: 30px 0;
     margin: auto;
-    width: 100%;
+    width: 92%;
     flex-wrap: wrap;
 }
 .new-status .new-members{
@@ -74,7 +75,7 @@ h3.user-h3 {
     align-items: center;
     border-left: 5px solid var(--main-color);
     background-color: var(--scend-color);
-    width: 80%;
+    width: 100%;
     padding: 10px;
     margin: auto;
     margin-bottom: 15px;
@@ -156,12 +157,16 @@ h3.user-h3 {
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
     /* .container{max-width: 540px; margin: auto;}  */
+    .costs{justify-content: space-evenly;}
+    .costs .cost-box{width: 220px;}
+
     .one-member{
         flex-direction: row;
     }
     .one-member .display {display: flex;}
     .one-member img{margin-bottom: 0;}
     .one-member .member-info p{text-align: left;}
+
   }
   
   /* // Medium devices (tablets, 768px and up) */

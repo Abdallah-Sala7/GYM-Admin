@@ -61,7 +61,7 @@ const data = [
   
 ];
   return (
-    <div className='home'>    
+    <div className='home container'>    
       <div className="costs">
         {costs.map(item => <div key={item.id} className="cost-box">
             <h4>{item.name}</h4>

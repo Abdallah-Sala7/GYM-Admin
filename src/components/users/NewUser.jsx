@@ -15,7 +15,7 @@ function NewUser() {
     const dispatch = useDispatch();
 
   return (
-    <div className='new-user-container'>
+    <div className='new-user-container container'>
         <h2>New User</h2>
         <div className='form' >
             <div className="form-one">

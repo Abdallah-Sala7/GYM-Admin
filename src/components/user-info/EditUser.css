@@ -4,15 +4,16 @@
 }
 .edit-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 10px;
 }
 .edit-container > div{
     border-radius: 20px;
+    width: 100%;
+
 }
 .user-info {
-    flex: 0.8;
     padding: 20px;
     background-color: var(--scend-color);
 } 
@@ -45,6 +46,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    font-size: 14px;
 }
 .user-info .details p svg{
     margin-right: 15px;
@@ -52,7 +54,6 @@
     font-size: 22px;
 }
 .edit-box{
-    flex: 1;
     padding: 20px;
     background-color: var(--scend-color);
 }
@@ -63,10 +64,13 @@
 .edit-box .flex-edit{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 .edit-box .edit-form {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 .edit-box .edit-form label{
     margin: 10px 0;
@@ -124,4 +128,32 @@
     background-color: var(--logo-color);
     color: #fff;
     border-radius: 7px;
+}
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+    .edit-box .edit-form{width: 250px;}
+    .user-info .details p{font-size: 16px;}
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    
+    .edit-container > div{
+        width: 48%;
+    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
 }

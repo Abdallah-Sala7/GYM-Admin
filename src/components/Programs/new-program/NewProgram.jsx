@@ -19,7 +19,7 @@ function NewProgram() {
   }
 
   return (
-    <div className='new-program'>
+    <div className='new-program container'>
       <h2>New Program</h2>
       <div className="new-program-form">
         <label htmlFor="img">image</label> 

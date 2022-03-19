@@ -50,7 +50,7 @@ function Program() {
           </td>
           <td>
             <div className="button-flex">
-              <Link to={'edit-program/'+1}>Edit</Link>
+              <Link to={'edit-program/'+item.id}>Edit</Link>
               <span onClick={()=>dispatch(deleteProgram(item.id))}>Delete</span>
             </div>
           </td>

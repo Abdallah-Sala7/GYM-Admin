@@ -161,7 +161,7 @@ const onPieEnter = (_, index) => {
                   <input type="file"  
                     onChange={(e)=>setImg("/img"+e.target.value.slice(11,))}
                   />
-                  <img src={img} alt="" />
+                  <img src="/img/new-img.jpg" alt="" />
                 </div>
                 <button
                   onClick={()=>dispatch(updateProgram({id:programId.id,img,name,days,price,member}))}

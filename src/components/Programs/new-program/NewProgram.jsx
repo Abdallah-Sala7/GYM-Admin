@@ -43,7 +43,7 @@ function NewProgram() {
         <input 
           type="text" 
           id='Price' 
-          placeholder='genral program' 
+          placeholder='100$' 
           onChange={(e)=>setPrice(e.target.value)}
         />
 

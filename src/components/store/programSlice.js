@@ -4,25 +4,25 @@ const initialState = {
     program:[
     {
         id:1,
-        name:'Basic ',
+        name:'Stretch & Yoga ',
         price:50,
-        img:'/img/man1.jpg',
+        img:'/img/yoga.png',
         member:20,
         days:3
     },
     {
         id:2,
-        name:'silver ',
+        name:'Cardio & Strength ',
         price:100,
-        img:'/img/man2.jpg',
+        img:'/img/cardio.jpg',
         member:30,
         days:5
     },
     {
         id:3,
-        name:'gold ',
+        name:'Muscle Building',
         price:150,
-        img:'/img/man3.jpg',
+        img:'/img/stre.jpg',
         member:5,
         days:'evre day'
     }

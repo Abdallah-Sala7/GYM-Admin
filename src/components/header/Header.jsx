@@ -23,7 +23,7 @@ function Header() {
               <CustomizedSwitches />
             </span>
             <span className="noti"> <NotificationsNoneOutlined /> </span>
-            <img src={"/img/admin.jpg"} />
+            <img src={"/img/admin.jpg"} alt="admin" />
             <span className="admin-name">Abdallah</span>
         </div>
     </div>

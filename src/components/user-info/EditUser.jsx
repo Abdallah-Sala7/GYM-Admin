@@ -19,7 +19,7 @@ function EditUser() {
 
 
   const [name, setName ] = useState(userId.name)
-  const [date, setDate ] = useState(userId.date)
+  // const [date, setDate ] = useState(userId.date)
   const [email, setEmail ] = useState(userId.email)
   const [phone, setPhone ] = useState(userId.phone)
   const [adress, setAdress ] = useState(userId.adress)
@@ -32,7 +32,7 @@ function EditUser() {
         <div className="edit-container">
           <div className="user-info">
             <div className="info-box">
-              <img src={userId.img} />
+              <img src={userId.img} alt={userId.img} />
               <div className="info-name">
                 <h4>{userId.name}</h4>
                 <p>Software Engineer</p>
@@ -113,11 +113,11 @@ function EditUser() {
               </div>
               <div className="edit-upload">
                 <div className="uploaud-img">
-                  <input type="file" onChange={(e)=>setImg(e.target.value)} />
+                  <input type="file" onChange={(e)=>setImg("/img"+e.target.value.slice(11,))} />
                   <img src={userId.img} alt={userId.img} />
                 </div>
                 <button onClick={()=> 
-                  dispatch(updateUser({id:userId.id,name,adress,email,date,phone,img}))}
+                  dispatch(updateUser({id:userId.id,name,adress,email,date:userId.date,phone,img}))}
                   >
                   Update
                 </button>

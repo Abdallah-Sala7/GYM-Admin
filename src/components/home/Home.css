@@ -36,7 +36,6 @@
 
 .chart{
     height: 320px;
-    width: 92%;
     margin: auto;
     box-shadow:  0px 0px 24px var(--shadow-color);
     padding: 10px;
@@ -55,7 +54,6 @@ h3.user-h3 {
     justify-content: space-between;
     padding: 30px 0;
     margin: auto;
-    width: 92%;
     flex-wrap: wrap;
 }
 .new-status .new-members{
@@ -186,14 +184,8 @@ h3.user-h3 {
     .costs .cost-box .cost-number span:first-of-type{font-size: 25px; font-weight: bold;}
     .chart{
         height: 400px;
-        width: 90%;
         padding: 30px 20px;
     }
-    .new-status {
-        width: 90%;
-    }
-
-
     .one-member {
         width: 90%;
         padding: 15px;

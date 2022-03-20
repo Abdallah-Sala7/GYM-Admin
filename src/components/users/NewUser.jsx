@@ -11,7 +11,7 @@ function NewUser() {
     const [userName, setUserName] = useState('')
     const [phone, setPhone] = useState('')
 
-    const {user,lastId} = useSelector(state => state.users)
+    const {lastId} = useSelector(state => state.users)
     const dispatch = useDispatch();
 
   return (
@@ -69,7 +69,7 @@ function NewUser() {
                 />
                 <label htmlFor="address">Address</label>
                 <input 
-                    type="tel" 
+                    type="text" 
                     id="address" 
                     placeholder='Mansoura - Egypt' 
                     onChange={(e)=>setAdress(e.target.value)}

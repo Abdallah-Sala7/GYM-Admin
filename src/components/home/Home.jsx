@@ -1,6 +1,6 @@
 import { useState,useEffect } from 'react'
 import {Addchart, ArrowDownwardOutlined, ArrowUpwardOutlined, EuroSharp, GroupOutlined, ShowChart} from '@mui/icons-material';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import {Visibility} from '@mui/icons-material';
 
 import './Home.css'
@@ -102,7 +102,7 @@ const data = [
           <h3>New Join Members</h3>
           <div className="member-box">
             {users.map(item => <div key={item.id} className="one-member">
-              <img src={item.img}/>
+              <img src={item.img} alt={item.img} />
               <div className="member-info">
                 <p>{item.name}</p>
                 <span>{item.job}</span>

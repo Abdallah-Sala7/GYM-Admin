@@ -39,7 +39,7 @@ export const programSlice = createSlice({
             state.lastId += 1
         },
         deleteProgram:(state,action)=>{
-            state.program = state.program.filter(item => item.id != action.payload)
+            state.program = state.program.filter(item => item.id !== action.payload)
         },
         updateProgram:(state,action)=>{
             state.program.map(item => {

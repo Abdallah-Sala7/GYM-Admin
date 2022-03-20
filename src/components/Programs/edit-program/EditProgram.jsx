@@ -38,8 +38,7 @@ function EditProgram() {
   const [days, setDays] = useState(programId.days)
   const [img, setImg] = useState(programId.img)
 
-  // performance chart attach
-  
+  // performance chart
   const target = (el) =>{
     setDays(el)
   }
@@ -172,7 +171,7 @@ const onPieEnter = (_, index) => {
           <div className="edit-upload">
                 <div className="uploaud-img">
                   <input type="file"  
-                    onChange={(e)=>setImg(e.target.value)}
+                    onChange={(e)=>setImg("/img"+e.target.value.slice(11,))}
                   />
                   <img src="/img/new-img.jpg" alt="/img/new-img.jpg" />
                 </div>

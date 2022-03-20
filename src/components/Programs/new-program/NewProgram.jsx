@@ -12,7 +12,7 @@ function NewProgram() {
   const [days, setDays] = useState('')
 
   const dispatch = useDispatch()
-  const {program,lastId} = useSelector(state => state.programs)
+  const {lastId} = useSelector(state => state.programs)
 
   const target = (el) =>{
     setDays(el)

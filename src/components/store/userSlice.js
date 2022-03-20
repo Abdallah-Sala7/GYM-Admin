@@ -9,7 +9,6 @@ const initialState = {
             img:'/img/man1.jpg',
             date:'10-11-2000',
             phone:'01025077437',
-            email:'abdallahsalah138@gmail.com',
             adress:'Mansoura - Egypt'
         },
         {
@@ -19,7 +18,6 @@ const initialState = {
             img:'/img/man2.jpg',
             date:'10-11-2000',
             phone:'01025077437',
-            email:'abdallahsalah138@gmail.com',
             adress:'Mansoura - Egypt'
         },
         {
@@ -29,7 +27,6 @@ const initialState = {
             img:'/img/man3.jpg',
             date:'10-11-2000',
             phone:'01025077437',
-            email:'abdallahsalah138@gmail.com',
             adress:'Mansoura - Egypt'
         },
         {
@@ -39,7 +36,6 @@ const initialState = {
             img:'/img/man4.jpg',
             date:'10-11-2000',
             phone:'01025077437',
-            email:'abdallahsalah138@gmail.com',
             adress:'Mansoura - Egypt'
         }
     ],
@@ -54,11 +50,11 @@ export const userSlice = createSlice({
             state.lastId += 1
         },
         deleteUser:(state,action)=>{
-            state.user = state.user.filter(item => item.id != action.payload)
+            state.user = state.user.filter(item => item.id !== action.payload)
         },
         updateUser:(state,action)=>{
             state.user.map(item => {
-                if (item.id == action.payload.id) {
+                if (item.id === action.payload.id) {
                     item.name = action.payload.name
                     item.email = action.payload.email
                     item.phone = action.payload.phone

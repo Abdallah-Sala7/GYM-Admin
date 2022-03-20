@@ -18,6 +18,11 @@ function App() {
     },1500)
   }
 
+  const asideActive = () => {
+    document.querySelector('.aside').classList.remove('active')
+    document.querySelector('.main').classList.remove('active')
+  }
+
   
   return (
     <>
@@ -26,7 +31,7 @@ function App() {
           <Header />
           <div className="main" onLoad={onLoadFun}>
               <Aside />
-              <div className="over-lay"></div>
+              <div className="over-lay" onClick={asideActive}></div>
               <div className="loading">
               <div class="lds-roller">
                 <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>

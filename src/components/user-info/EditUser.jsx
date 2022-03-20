@@ -9,7 +9,14 @@ function EditUser() {
   const params = useParams();
   const {user} = useSelector(state => state.users)
   const dispatch = useDispatch()
-  const userId = user[params.id - 1]
+  let userId = ''
+
+  user.map(item =>{
+    if (item.id == params.id) {
+      userId = item
+    }
+  })
+
 
   const [name, setName ] = useState(userId.name)
   const [date, setDate ] = useState(userId.date)
@@ -18,8 +25,6 @@ function EditUser() {
   const [adress, setAdress ] = useState(userId.adress)
   const [img, setImg ] = useState(userId.img)
 
-
-  console.log(img);
 
   return (
     <div className='edit-user container'>
@@ -82,7 +87,7 @@ function EditUser() {
 
                 <label htmlFor="Email">Email</label>
                 <input 
-                  type="text" 
+                  type="email" 
                   defaultValue={userId.email} 
                   id="Email" 
                   onChange={(e)=>setEmail(e.target.value)}
@@ -91,7 +96,7 @@ function EditUser() {
 
                 <label htmlFor="Phone">Phone</label>
                 <input 
-                  type="text" 
+                  type="number" 
                   defaultValue={userId.phone} 
                   id="Phone"
                   onChange={(e)=>setPhone(e.target.value)} 
@@ -108,8 +113,8 @@ function EditUser() {
               </div>
               <div className="edit-upload">
                 <div className="uploaud-img">
-                  <input type="file" onChange={(e)=>setImg("/img"+e.target.value.slice(11,))} />
-                  <img src={userId.img} alt="" />
+                  <input type="file" onChange={(e)=>setImg(e.target.value)} />
+                  <img src={userId.img} alt={userId.img} />
                 </div>
                 <button onClick={()=> 
                   dispatch(updateUser({id:userId.id,name,adress,email,date,phone,img}))}

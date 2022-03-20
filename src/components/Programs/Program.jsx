@@ -8,7 +8,6 @@ function Program() {
 
   const {program} = useSelector(state => state.programs)
   const dispatch = useDispatch()
-  console.log(program);
   return (
     <div className='container'>
     <div className="table-info ">

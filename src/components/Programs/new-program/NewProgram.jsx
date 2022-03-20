@@ -12,7 +12,7 @@ function NewProgram() {
   const [days, setDays] = useState('')
 
   const dispatch = useDispatch()
-  const {program} = useSelector(state => state.programs)
+  const {program,lastId} = useSelector(state => state.programs)
 
   const target = (el) =>{
     setDays(el)
@@ -41,7 +41,7 @@ function NewProgram() {
 
         <label htmlFor="Price">Price</label>
         <input 
-          type="text" 
+          type="number" 
           id='Price' 
           placeholder='100$' 
           onChange={(e)=>setPrice(e.target.value)}
@@ -53,8 +53,8 @@ function NewProgram() {
         </div>
         
         <button onClick={()=>{img.length > 0 ?
-            dispatch(addProgram({id:program.length+1,name,price,days,img:"/img"+img.slice(11,)}))
-            : dispatch(addProgram({id:program.length+1,name,price,days,img:'/img/default-img.png'}))
+            dispatch(addProgram({id:lastId,name,price,days,img:"/img"+img.slice(11,)}))
+            : dispatch(addProgram({id:lastId,name,price,days,img:'/img/default-img.png'}))
         }}
         >Create</button>
       </div>

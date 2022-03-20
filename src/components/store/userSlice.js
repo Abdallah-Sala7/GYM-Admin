@@ -42,7 +42,8 @@ const initialState = {
             email:'abdallahsalah138@gmail.com',
             adress:'Mansoura - Egypt'
         }
-    ]
+    ],
+    lastId:5
 }
 export const userSlice = createSlice({
     name:'users',
@@ -50,13 +51,22 @@ export const userSlice = createSlice({
     reducers:{
         addUser:(state, action)=>{
             state.user.push(action.payload)
+            state.lastId += 1
         },
         deleteUser:(state,action)=>{
             state.user = state.user.filter(item => item.id != action.payload)
         },
         updateUser:(state,action)=>{
-            state.user[action.payload.id - 1] = action.payload
-        }
+            state.user.map(item => {
+                if (item.id == action.payload.id) {
+                    item.name = action.payload.name
+                    item.email = action.payload.email
+                    item.phone = action.payload.phone
+                    item.img = action.payload.img
+                    item.adress = action.payload.adress
+                }
+            })
+      }
     }
 })
 

@@ -14,7 +14,8 @@
     left: -10px;
 }
 .aside.active{
-    width: 250px;
+    width: 200px;
+    left: 0;
 }
 .aside .logo{
     display: flex;
@@ -42,29 +43,26 @@
     transition: 0.3s color ease-in-out;
 
 }
-.aside .minu-icon-name.active::before{
-    position: absolute;
-    top: -50px;
+.aside .minu-icon-name.active::before,
+.aside .minu-icon-name.active::after{
     right: 0;
-    content: '';
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     background-color: transparent;
     border-radius: 50%;
-    box-shadow: 35px 35px 0 10px var(--bg-color);
+    content: '';
     pointer-events: none;
+    position: absolute;
+
+
+}
+.aside .minu-icon-name.active::before{
+    top: -35px;
+    box-shadow: 30px 22px 0 10px var(--bg-color);
 }
 .aside .minu-icon-name.active::after{
-    position: absolute;
-    bottom: -50px;
-    right: 0;
-    content: '';
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    border-radius: 50%;
-    box-shadow: 35px -35px 0 10px var(--bg-color);
-    pointer-events: none;
+    bottom: -35px;
+    box-shadow: 27px -22px 0 10px var(--bg-color);
 }
 .aside .minu-icon-name.active{
     background-color: var(--bg-color);
@@ -74,7 +72,7 @@
     color: var(--logo-color);
 }
 .aside .minu-icon-name .aside-icon{
-    padding: 20px;
+    padding: 15px;
 }
 .aside .minu-icon-name .aside-icon svg{    font-size: 25px;
 }
@@ -111,6 +109,24 @@
         width: 90px;
         position: sticky;
         left: 0;
+    }
+    .aside.active{
+        width: 250px;
+    }
+    .aside .minu-icon-name .aside-icon{
+        padding: 20px;
+    }
+    .aside .minu-icon-name.active::before{
+        top: -50px;
+        width: 50px;
+        height: 50px;
+        box-shadow: 35px 35px 0 10px var(--bg-color);
+    }
+    .aside .minu-icon-name.active::after{
+        bottom: -50px;
+        width: 50px;
+        height: 50px;
+        box-shadow: 35px -35px 0 10px var(--bg-color);        
     }
 
 }

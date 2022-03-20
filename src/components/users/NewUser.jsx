@@ -11,7 +11,7 @@ function NewUser() {
     const [userName, setUserName] = useState('')
     const [phone, setPhone] = useState('')
 
-    const {user} = useSelector(state => state.users)
+    const {user,lastId} = useSelector(state => state.users)
     const dispatch = useDispatch();
 
   return (
@@ -83,8 +83,8 @@ function NewUser() {
                 </div>
                 <button 
                     onClick={()=>{img.length > 0 ?
-                        dispatch(addUser({id:user.length+1,name,email,adress,userName,phone,img:"/img"+img.slice(11,)}))
-                        : dispatch(addUser({id:user.length+1,name,email,adress,userName,phone,img:'/img/default-img.png'}))
+                        dispatch(addUser({id:lastId,name,email,adress,userName,phone,img:"/img"+img.slice(11,)}))
+                        : dispatch(addUser({id:lastId,name,email,adress,userName,phone,img:'/img/default-img.png'}))
                     }}
                 >
                     Create

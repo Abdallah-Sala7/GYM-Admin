@@ -15,10 +15,22 @@ function EditProgram() {
     { name: 'Apr', value: 300 },
   ];
 
+  // dispatch data from redux 
+
   const {program} = useSelector(state => state.programs) 
   const dispatch = useDispatch()
+
+  // display data in the page 
+
   const params = useParams()
-  const programId = program[params.id - 1]
+  let programId = ''
+  program.map(item => {
+    if (item.id == params.id) {
+      programId = item
+    }
+  })
+
+  // change data in page 
 
   const [name, setName] = useState(programId.name)
   const [price, setPrice] = useState(programId.price)
@@ -26,11 +38,11 @@ function EditProgram() {
   const [days, setDays] = useState(programId.days)
   const [img, setImg] = useState(programId.img)
 
+  // performance chart attach
+  
   const target = (el) =>{
     setDays(el)
   }
-
-
 const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180;
   const { cx, cy, midAngle, innerRadius, outerRadius, startAngle, endAngle, fill, payload, percent, value } = props;
@@ -75,10 +87,11 @@ const renderActiveShape = (props) => {
       </text>
     </g>
   );
-};
+}
+
 const onPieEnter = (_, index) => {
   setActiveIndex(index)
-};
+}
 
 
   return (
@@ -107,7 +120,7 @@ const onPieEnter = (_, index) => {
           </div>
           <div className="program-info">
             <div className="img-box">
-              <img src={img} alt="" />
+              <img src={img} alt={img} />
               <h4>{name}</h4>
             </div>
             <p>
@@ -159,9 +172,9 @@ const onPieEnter = (_, index) => {
           <div className="edit-upload">
                 <div className="uploaud-img">
                   <input type="file"  
-                    onChange={(e)=>setImg("/img"+e.target.value.slice(11,))}
+                    onChange={(e)=>setImg(e.target.value)}
                   />
-                  <img src="/img/new-img.jpg" alt="" />
+                  <img src="/img/new-img.jpg" alt="/img/new-img.jpg" />
                 </div>
                 <button
                   onClick={()=>dispatch(updateProgram({id:programId.id,img,name,days,price,member}))}

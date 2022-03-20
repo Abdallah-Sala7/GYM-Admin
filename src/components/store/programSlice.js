@@ -26,7 +26,9 @@ const initialState = {
         member:5,
         days:'evre day'
     }
-]}
+],
+    lastId:4    
+}
 
 export const programSlice = createSlice({
     name:'programs',
@@ -34,12 +36,21 @@ export const programSlice = createSlice({
     reducers:{
         addProgram : (state, action) =>{
             state.program.push(action.payload)
+            state.lastId += 1
         },
         deleteProgram:(state,action)=>{
             state.program = state.program.filter(item => item.id != action.payload)
         },
         updateProgram:(state,action)=>{
-            state.program[action.payload.id - 1] = action.payload
+            state.program.map(item => {
+                if (item.id == action.payload.id) {
+                    item.name = action.payload.name
+                    item.days = action.payload.days
+                    item.price = action.payload.price
+                    item.member = action.payload.member
+                    item.img = action.payload.img
+                }
+            })
         }
     }
 })

@@ -1,10 +1,12 @@
 import { NavLink } from 'react-router-dom'
 import {Apps, Home, PersonOutline} from '@mui/icons-material'
 import './Aside.css'
+import { useSelector } from 'react-redux'
 
 function Aside() {
+    const {asideActive} = useSelector(state => state.toggle)
   return (
-    <div className='aside'>
+    <div className={`aside ${asideActive == true ? 'active':''}`}>
         <div className="main-minu">
             <NavLink to={'/'} className="minu-icon-name">
                 <span className='aside-icon'>

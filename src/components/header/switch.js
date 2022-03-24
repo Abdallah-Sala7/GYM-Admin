@@ -3,12 +3,15 @@ import { styled } from '@mui/material/styles';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
+import { useDispatch } from 'react-redux';
+import { toggleDark } from '../store/toggleSlice';
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
   height: 34,
   padding: 7,
   '& .MuiSwitch-switchBase': {
+    pointerEvents:'none' ,
     margin: 1,
     padding: 0,
     transform: 'translateX(6px)',
@@ -52,12 +55,15 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 
 export default function CustomizedSwitches() {
+const dispatch = useDispatch()
+
   return (
     <FormGroup>
       <FormControlLabel
-        control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
+        control={<MaterialUISwitch onClick={()=> dispatch(toggleDark())} sx={{ m: 1 }} defaultChecked />}
         label=""
       />
     </FormGroup>
   );
 }
+  

@@ -16,9 +16,15 @@ function App() {
   const [loading, setLoading] = useState(true)
   const {asideActive,darkActive} = useSelector(state => state.toggle) 
   const dispatch = useDispatch()
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500);
+  }, [])
   
   return (
-    <div className={`app ${darkActive ?'dark':'' }`} onLoad={()=>setLoading(false)} >
+    <div className={`app ${darkActive ?'dark':'' }`} >
       <BrowserRouter>
           <Header />
           {

@@ -1,6 +1,6 @@
 import { useState,useEffect } from 'react'
 import {Addchart, ArrowDownwardOutlined, ArrowUpwardOutlined, EuroSharp, GroupOutlined, ShowChart} from '@mui/icons-material';
-import { LineChart, Line, XAxis, CartesianGrid, Tooltip, ResponsiveContainer, YAxis } from 'recharts';
+import { LineChart, Line, XAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import {Visibility} from '@mui/icons-material';
 
 import './Home.css'
@@ -90,9 +90,7 @@ const data = [
             <XAxis dataKey="name" stroke='#764abc'/>
             <Line type="monotone" dataKey="active user" stroke="#764abc" activeDot={{ r: 8 }}/>
             <Tooltip />
-            <CartesianGrid stroke='#80808063' strokeDasharray="5 5" />
-            <YAxis stroke='#764abc'/>
-
+            <CartesianGrid stroke='#80808014' strokeDasharray="5 5" />
           </LineChart>
         </ResponsiveContainer>
       </div>

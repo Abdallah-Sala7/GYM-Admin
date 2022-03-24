@@ -36,6 +36,7 @@
     align-items: center;
     justify-content: right;
 }
+.header-box .toggle-mode{width: 55px;}
 .header-box span.noti{
     margin-right: 35px;
     width: 30px;
@@ -95,7 +96,7 @@ span.lang {
     .header-box span.dark-span{
         margin-right: 25px;
     }
-    .switch{    margin-right: 20px;
+    .header-box .toggle-mode{    margin-right: 20px;
     }
 
 }
